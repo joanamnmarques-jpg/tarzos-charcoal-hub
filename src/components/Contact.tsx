@@ -1,0 +1,179 @@
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+
+const contactInfo = [
+  {
+    icon: MapPin,
+    label: "Morada",
+    value: "Zona Industrial de Aveiro, Lote 45\n3800-000 Aveiro, Portugal",
+  },
+  {
+    icon: Phone,
+    label: "Telefone",
+    value: "+351 234 567 890",
+  },
+  {
+    icon: Mail,
+    label: "Email",
+    value: "info@tarzo.pt",
+  },
+  {
+    icon: Clock,
+    label: "Horário",
+    value: "Segunda - Sexta: 8h - 18h\nSábado: 9h - 13h",
+  },
+];
+
+const Contact = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast({
+      title: "Mensagem Enviada!",
+      description: "Entraremos em contacto consigo brevemente.",
+    });
+    setFormData({ name: "", company: "", email: "", phone: "", message: "" });
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  return (
+    <section id="contacto" className="py-24 bg-secondary/30 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute left-0 bottom-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[150px]" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Section Header */}
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <span className="text-primary uppercase tracking-widest text-sm font-medium">Contacto</span>
+          <h2 className="font-display text-5xl md:text-6xl text-foreground mt-4 mb-6">
+            VAMOS CONVERSAR
+          </h2>
+          <p className="text-muted-foreground text-lg">
+            Pronto para elevar a qualidade dos seus grelhados? 
+            Entre em contacto para um orçamento personalizado.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Info */}
+          <div className="space-y-8">
+            {contactInfo.map((item) => (
+              <div key={item.label} className="flex gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                  <item.icon className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <div className="text-sm text-muted-foreground uppercase tracking-wider mb-1">{item.label}</div>
+                  <div className="text-foreground whitespace-pre-line">{item.value}</div>
+                </div>
+              </div>
+            ))}
+
+            {/* Map placeholder */}
+            <div className="mt-8 h-64 bg-card rounded-xl border border-border overflow-hidden">
+              <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+                <div className="text-center">
+                  <MapPin className="w-8 h-8 mx-auto mb-2 text-primary" />
+                  <p className="text-sm">Zona Industrial de Aveiro</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="bg-card border border-border rounded-2xl p-8">
+            <h3 className="font-display text-2xl text-foreground mb-6">Pedir Orçamento</h3>
+            
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm text-muted-foreground mb-2">Nome *</label>
+                  <Input
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="bg-secondary border-border"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="company" className="block text-sm text-muted-foreground mb-2">Empresa</label>
+                  <Input
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    className="bg-secondary border-border"
+                  />
+                </div>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="email" className="block text-sm text-muted-foreground mb-2">Email *</label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="bg-secondary border-border"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm text-muted-foreground mb-2">Telefone</label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="bg-secondary border-border"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm text-muted-foreground mb-2">Mensagem *</label>
+                <Textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={5}
+                  className="bg-secondary border-border resize-none"
+                  placeholder="Descreva as suas necessidades de carvão..."
+                />
+              </div>
+
+              <Button type="submit" variant="fire" size="lg" className="w-full">
+                Enviar Mensagem
+                <Send className="w-4 h-4 ml-2" />
+              </Button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
