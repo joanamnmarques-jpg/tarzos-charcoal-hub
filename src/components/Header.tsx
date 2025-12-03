@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Flame } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logoTarzo from "@/assets/logo-tarzo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,8 +20,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-2 group">
-            <Flame className="w-8 h-8 text-primary transition-transform group-hover:scale-110" />
-            <span className="font-display text-3xl tracking-wider text-foreground">TARZO</span>
+            <img 
+              src={logoTarzo} 
+              alt="Tarzo - Comércio e Distribuição" 
+              className="h-14 w-auto transition-transform group-hover:scale-105"
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -38,7 +42,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="fire" size="lg">
+            <Button variant="glow" size="lg">
               Pedir Orçamento
             </Button>
           </div>
@@ -67,7 +71,7 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="fire" size="lg" className="mt-4">
+              <Button variant="glow" size="lg" className="mt-4">
                 Pedir Orçamento
               </Button>
             </div>

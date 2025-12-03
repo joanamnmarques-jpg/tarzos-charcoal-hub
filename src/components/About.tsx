@@ -14,7 +14,7 @@ const About = () => {
             <span className="text-primary uppercase tracking-widest text-sm font-medium">Sobre a Tarzo</span>
             <h2 className="font-display text-5xl md:text-6xl text-foreground mt-4 mb-8">
               TRADIÇÃO QUE
-              <span className="block text-gradient-fire">ALIMENTA O FUTURO</span>
+              <span className="block text-gradient-blue">ALIMENTA O FUTURO</span>
             </h2>
 
             <div className="space-y-6 text-muted-foreground">
@@ -34,7 +34,7 @@ const About = () => {
             </div>
 
             <div className="flex gap-4 mt-10">
-              <Button variant="fire" size="lg">
+              <Button variant="glow" size="lg">
                 A Nossa História
               </Button>
               <Button variant="outline" size="lg">
