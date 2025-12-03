@@ -1,4 +1,5 @@
-import { Flame, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
+import logoTarzo from "@/assets/logo-tarzo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,9 +10,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <a href="#inicio" className="flex items-center gap-2 mb-6">
-              <Flame className="w-8 h-8 text-primary" />
-              <span className="font-display text-3xl tracking-wider text-foreground">TARZO</span>
+            <a href="#inicio" className="inline-block mb-6">
+              <img 
+                src={logoTarzo} 
+                alt="Tarzo - Comércio e Distribuição" 
+                className="h-20 w-auto"
+              />
             </a>
             <p className="text-muted-foreground max-w-md mb-6">
               Fornecedor premium de carvão para restaurantes desde 2009. 
@@ -80,7 +84,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Tarzo. Todos os direitos reservados.
+            © {currentYear} Tarzo - Comércio e Distribuição. Todos os direitos reservados.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-primary transition-colors">Política de Privacidade</a>

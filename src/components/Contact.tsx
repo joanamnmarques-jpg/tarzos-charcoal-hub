@@ -164,7 +164,7 @@ const Contact = () => {
                 />
               </div>
 
-              <Button type="submit" variant="fire" size="lg" className="w-full">
+              <Button type="submit" variant="glow" size="lg" className="w-full">
                 Enviar Mensagem
                 <Send className="w-4 h-4 ml-2" />
               </Button>
