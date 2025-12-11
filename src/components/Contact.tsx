@@ -33,6 +33,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     company: "",
+    nif: "",
     email: "",
     phone: "",
     message: "",
@@ -44,7 +45,7 @@ const Contact = () => {
       title: "Mensagem Enviada!",
       description: "Entraremos em contacto consigo brevemente.",
     });
-    setFormData({ name: "", company: "", email: "", phone: "", message: "" });
+    setFormData({ name: "", company: "", nif: "", email: "", phone: "", message: "" });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -126,14 +127,18 @@ const Contact = () => {
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="email" className="block text-sm text-muted-foreground mb-2">Email *</label>
+                  <label htmlFor="nif" className="block text-sm text-muted-foreground mb-2">NIF *</label>
                   <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
+                    id="nif"
+                    name="nif"
+                    type="text"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    value={formData.nif}
                     onChange={handleChange}
                     required
+                    maxLength={9}
+                    placeholder="123456789"
                     className="bg-secondary border-border"
                   />
                 </div>
@@ -148,6 +153,19 @@ const Contact = () => {
                     className="bg-secondary border-border"
                   />
                 </div>
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block text-sm text-muted-foreground mb-2">Email *</label>
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="bg-secondary border-border"
+                />
               </div>
 
               <div>
