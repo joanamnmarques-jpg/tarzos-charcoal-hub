@@ -182,10 +182,18 @@ const Contact = () => {
                 />
               </div>
 
-              <Button type="submit" variant="glow" size="lg" className="w-full">
-                Enviar Mensagem
-                <Send className="w-4 h-4 ml-2" />
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button type="submit" variant="glow" size="lg" className="flex-1">
+                  Enviar Mensagem
+                  <Send className="w-4 h-4 ml-2" />
+                </Button>
+                <Button asChild variant="outline" size="lg" className="flex-1">
+                  <a href="tel:917197562">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Ligar
+                  </a>
+                </Button>
+              </div>
             </form>
           </div>
         </div>
