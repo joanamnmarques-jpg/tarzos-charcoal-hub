@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { Quote } from "lucide-react";
 
 const About = () => {
   return (
@@ -34,31 +32,17 @@ const About = () => {
 
           </div>
 
-          {/* Right content - Testimonial */}
+          {/* Right content - Video */}
           <div className="relative">
-            <div className="bg-card border border-border rounded-2xl p-10 relative">
-              {/* Quote icon */}
-              <div className="absolute -top-6 left-10">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                  <Quote className="w-6 h-6 text-primary-foreground" />
-                </div>
-              </div>
-
-              <blockquote className="text-xl text-foreground font-light italic leading-relaxed mt-4 mb-8">
-                "O carvão Tarzo transformou completamente a experiência dos nossos grelhados. 
-                A consistência da temperatura e a qualidade do sabor são incomparáveis. 
-                Os nossos clientes notaram a diferença imediatamente."
-              </blockquote>
-
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center font-display text-xl text-primary">
-                  JM
-                </div>
-                <div>
-                  <div className="font-semibold text-foreground">João Mendes</div>
-                  <div className="text-sm text-muted-foreground">Chef Executivo, Restaurante Brasas</div>
-                </div>
-              </div>
+            <div className="bg-card border border-border rounded-2xl overflow-hidden relative">
+              <video 
+                className="w-full h-auto"
+                controls
+                preload="metadata"
+              >
+                <source src="/videos/tarzo-parceiro.mp4" type="video/mp4" />
+                O seu navegador não suporta a reprodução de vídeo.
+              </video>
             </div>
 
             {/* Decorative elements */}
