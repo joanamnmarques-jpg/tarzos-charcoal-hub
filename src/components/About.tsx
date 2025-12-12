@@ -19,17 +19,16 @@ const About = () => {
 
             <div className="space-y-6 text-muted-foreground">
               <p>
-                Fundada em 2009, a Tarzo nasceu da paixão pela arte de grelhar e do compromisso 
-                em fornecer combustível de excelência aos profissionais da restauração.
+                A TARZO é uma empresa de distribuição fundada em 2024, dedicada principalmente ao fornecimento de carvão para o setor da restauração. Atendemos empresas que dependem de um fornecimento fiável, oferecendo carvão de alta qualidade, com logística eficiente e entregas pontuais.
               </p>
               <p>
-                Trabalhamos exclusivamente com madeiras selecionadas de florestas sustentáveis, 
-                transformadas em carvão através de processos tradicionais que preservam todas 
-                as qualidades naturais da madeira.
+                Expandimos a nossa operação para incluir cebolas e batatas, garantindo aos nossos clientes uma solução prática e centralizada para produtos essenciais do dia a dia comercial. Trabalhamos com produtores selecionados e processos rigorosos de controlo de qualidade para assegurar frescura, consistência e confiança em cada entrega.
               </p>
               <p>
-                Hoje, somos o parceiro de confiança de mais de 500 restaurantes em Portugal, 
-                desde pequenas churrasqueiras de bairro até estabelecimentos com estrelas Michelin.
+                Guiamo-nos pelo compromisso com preço justo, qualidade garantida e um bom serviço, princípios que norteiam todas as nossas operações e relações comerciais. Seja para supermercados, restaurantes, retalhistas ou indústrias, e até particulares, posicionamo-nos como um parceiro sólido e eficiente.
+              </p>
+              <p>
+                Com uma equipa experiente e uma estrutura logística moderna, a TARZO está preparada para atender as necessidades do mercado com profissionalismo, proximidade e eficiência.
               </p>
             </div>
 
