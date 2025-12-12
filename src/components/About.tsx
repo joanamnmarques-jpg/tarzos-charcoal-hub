@@ -37,9 +37,6 @@ const About = () => {
               <Button variant="glow" size="lg">
                 A Nossa História
               </Button>
-              <Button variant="outline" size="lg">
-                Ver Certificações
-              </Button>
             </div>
           </div>
 
