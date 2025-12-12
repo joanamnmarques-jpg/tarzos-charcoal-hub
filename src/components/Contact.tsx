@@ -198,7 +198,7 @@ const Contact = () => {
                   required
                   rows={5}
                   className="bg-secondary border-border resize-none"
-                  placeholder="Descreva as suas necessidades de carvão..."
+                  placeholder="Descreva o que pretende..."
                 />
               </div>
 
