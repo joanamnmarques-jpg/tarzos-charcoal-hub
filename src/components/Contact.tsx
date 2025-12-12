@@ -29,7 +29,7 @@ const contactInfo = [
   {
     icon: Clock,
     label: "Horário",
-    value: "Segunda - Sexta: 8h - 18h\nSábado: 9h - 13h",
+    value: "Segunda - Sexta: 8h - 19h\nSábado: 9h - 17h",
   },
 ];
 
