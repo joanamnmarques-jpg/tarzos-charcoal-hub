@@ -32,11 +32,6 @@ const About = () => {
               </p>
             </div>
 
-            <div className="flex gap-4 mt-10">
-              <Button variant="glow" size="lg">
-                A Nossa História
-              </Button>
-            </div>
           </div>
 
           {/* Right content - Testimonial */}
