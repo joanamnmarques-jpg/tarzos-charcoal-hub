@@ -5,21 +5,26 @@ import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
+const googleMapsUrl = "https://www.google.com/maps/dir/?api=1&destination=Rua+dos+Emigrantes+7+2530-329+Cabeça+Gorda+Lourinhã+Portugal";
+
 const contactInfo = [
   {
     icon: MapPin,
     label: "Morada",
-    value: "Zona Industrial de Aveiro, Lote 45\n3800-000 Aveiro, Portugal",
+    value: "Rua dos Emigrantes, nº 7\n2530-329 Cabeça Gorda, Lourinhã, Portugal",
+    href: googleMapsUrl,
   },
   {
     icon: Phone,
     label: "Telefone",
-    value: "+351 234 567 890",
+    value: "+351 917 197 562",
+    href: "tel:917197562",
   },
   {
     icon: Mail,
     label: "Email",
     value: "info@tarzo.pt",
+    href: "mailto:info@tarzo.pt",
   },
   {
     icon: Clock,
@@ -80,20 +85,35 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground uppercase tracking-wider mb-1">{item.label}</div>
-                  <div className="text-foreground whitespace-pre-line">{item.value}</div>
+                  {item.href ? (
+                    <a 
+                      href={item.href} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-foreground whitespace-pre-line hover:text-primary transition-colors cursor-pointer"
+                    >
+                      {item.value}
+                    </a>
+                  ) : (
+                    <div className="text-foreground whitespace-pre-line">{item.value}</div>
+                  )}
                 </div>
               </div>
             ))}
 
             {/* Map placeholder */}
-            <div className="mt-8 h-64 bg-card rounded-xl border border-border overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                <div className="text-center">
-                  <MapPin className="w-8 h-8 mx-auto mb-2 text-primary" />
-                  <p className="text-sm">Zona Industrial de Aveiro</p>
-                </div>
+            <a 
+              href={googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 h-64 bg-card rounded-xl border border-border overflow-hidden flex items-center justify-center text-muted-foreground hover:border-primary/50 transition-colors cursor-pointer group"
+            >
+              <div className="text-center">
+                <MapPin className="w-8 h-8 mx-auto mb-2 text-primary group-hover:scale-110 transition-transform" />
+                <p className="text-sm group-hover:text-primary transition-colors">Cabeça Gorda, Lourinhã</p>
+                <p className="text-xs text-muted-foreground mt-1">Clique para abrir no Google Maps</p>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Contact Form */}
