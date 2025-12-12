@@ -209,7 +209,7 @@ const Contact = () => {
                 </Button>
                 <Button asChild variant="outline" size="lg" className="flex-1">
                   <a href="tel:917197562">
-                    <Phone className="w-4 h-4 mr-2" />
+                    <Phone className="w-4 h-4 mr-2 text-green-500" />
                     Ligar
                   </a>
                 </Button>
