@@ -112,9 +112,11 @@ const Products = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <p className="text-muted-foreground mb-4">Precisa de um produto personalizado?</p>
-          <Button variant="glow" size="lg">
-            Fale Connosco
-          </Button>
+          <a href="#contacto">
+            <Button variant="glow" size="lg">
+              Fale Connosco
+            </Button>
+          </a>
         </div>
       </div>
     </section>
