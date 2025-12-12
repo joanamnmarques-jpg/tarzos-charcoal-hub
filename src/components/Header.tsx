@@ -42,8 +42,8 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="glow" size="lg">
-              Pedir Orçamento
+            <Button variant="glow" size="lg" asChild>
+              <a href="#contacto">Pedir Orçamento</a>
             </Button>
           </div>
 
@@ -71,8 +71,8 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="glow" size="lg" className="mt-4">
-                Pedir Orçamento
+              <Button variant="glow" size="lg" className="mt-4" asChild>
+                <a href="#contacto" onClick={() => setIsMenuOpen(false)}>Pedir Orçamento</a>
               </Button>
             </div>
           </nav>
