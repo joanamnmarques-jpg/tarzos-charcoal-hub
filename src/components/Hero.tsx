@@ -54,9 +54,11 @@ const Hero = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </a>
-            <Button variant="heroOutline" size="xl">
-              Contactar
-            </Button>
+            <a href="#contacto">
+              <Button variant="heroOutline" size="xl">
+                Contactar
+              </Button>
+            </a>
           </div>
 
           {/* Stats */}
