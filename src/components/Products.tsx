@@ -51,7 +51,7 @@ Se procura um carvão de qualidade superior, com excelente rendimento e desempen
     subtitle: "",
     description: "O carvão nacional de sobro é natural, de origem portuguesa, acende rapidamente e garante uma queima estável e eficiente.",
     image: productBulk,
-    features: ["Preço competitivo", "Entrega paletizada", "Contrato personalizado"],
+    features: ["Ignição rápida", "Preço competitivo", "Produto nacional"],
     popular: false,
     detailedDescription: null,
   },
