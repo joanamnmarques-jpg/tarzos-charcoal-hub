@@ -61,21 +61,6 @@ const Hero = () => {
             </a>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-20 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <div className="text-center">
-              <div className="font-display text-4xl md:text-5xl text-primary">500+</div>
-              <div className="text-sm text-muted-foreground uppercase tracking-wider mt-1">Restaurantes</div>
-            </div>
-            <div className="text-center">
-              <div className="font-display text-4xl md:text-5xl text-primary">15</div>
-              <div className="text-sm text-muted-foreground uppercase tracking-wider mt-1">Anos de Experiência</div>
-            </div>
-            <div className="text-center">
-              <div className="font-display text-4xl md:text-5xl text-primary">100%</div>
-              <div className="text-sm text-muted-foreground uppercase tracking-wider mt-1">Natural</div>
-            </div>
-          </div>
         </div>
       </div>
 
