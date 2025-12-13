@@ -49,7 +49,7 @@ const Products = () => {
           </h2>
           <p className="text-muted-foreground text-lg">
             Três linhas de produto pensadas para diferentes necessidades. 
-            Todas com a mesma garantia de qualidade Tarzo.
+            Todas com a mesma garantia de qualidade TARZO.
           </p>
         </div>
 

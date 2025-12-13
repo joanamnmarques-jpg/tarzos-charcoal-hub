@@ -47,7 +47,7 @@ const Benefits = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-primary uppercase tracking-widest text-sm font-medium">Porquê Tarzo</span>
+          <span className="text-primary uppercase tracking-widest text-sm font-medium">Porquê TARZO</span>
           <h2 className="font-display text-5xl md:text-6xl text-foreground mt-4 mb-6">
             A DIFERENÇA ESTÁ NOS DETALHES
           </h2>

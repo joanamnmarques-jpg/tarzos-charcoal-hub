@@ -13,7 +13,7 @@ const Footer = () => {
             <a href="#inicio" className="inline-block mb-6">
               <img 
                 src={logoTarzo} 
-                alt="Tarzo - Comércio e Distribuição" 
+                alt="TARZO - Comércio e Distribuição" 
                 className="h-20 w-auto"
               />
             </a>
@@ -84,7 +84,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Tarzo - Comércio e Distribuição. Todos os direitos reservados.
+            © {currentYear} TARZO - Comércio e Distribuição. Todos os direitos reservados.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-primary transition-colors">Política de Privacidade</a>
