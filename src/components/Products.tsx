@@ -1,5 +1,13 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 import productPremium from "@/assets/product-premium.jpg";
 import productRestaurant from "@/assets/product-restaurant.jpg";
 import productBulk from "@/assets/product-bulk.jpg";
@@ -13,6 +21,22 @@ const products = [
     image: productPremium,
     features: ["Alta densidade", "Baixa produção de fumo", "3+ horas de combustão"],
     popular: true,
+    detailedDescription: `Principais vantagens:
+O carvão de marabú (feito a partir da planta marabú, muito comum em Cuba) é bastante valorizado no uso profissional e doméstico. Os principais benefícios são:
+
+• Alto poder calorífico – gera muito calor com menos quantidade de carvão
+
+• Queima longa e estável – ideal para grelhados prolongados
+
+• Pouca produção de fumo – melhora o sabor dos alimentos
+
+• Baixa produção de cinzas – mais limpeza e menos desperdício
+
+• Sabor neutro – não altera o gosto dos alimentos
+
+• Carvão denso e resistente – não se desfaz facilmente
+
+• Origem sustentável – feito a partir de uma planta invasora`,
   },
   {
     id: 2,
@@ -22,6 +46,7 @@ const products = [
     image: productRestaurant,
     features: ["Ignição em 15 min", "Temperatura estável", "Sem aditivos químicos"],
     popular: false,
+    detailedDescription: null,
   },
   {
     id: 3,
@@ -31,10 +56,13 @@ const products = [
     image: productBulk,
     features: ["Preço competitivo", "Entrega paletizada", "Contrato personalizado"],
     popular: false,
+    detailedDescription: null,
   },
 ];
 
 const Products = () => {
+  const [selectedProduct, setSelectedProduct] = useState<typeof products[0] | null>(null);
+
   return (
     <section id="produtos" className="py-24 bg-background relative overflow-hidden">
       {/* Background decoration */}
@@ -95,7 +123,12 @@ const Products = () => {
                 </ul>
 
                 {/* CTA */}
-                <Button variant="outline" className="w-full group/btn">
+                <Button 
+                  variant="outline" 
+                  className="w-full group/btn"
+                  onClick={() => product.detailedDescription && setSelectedProduct(product)}
+                  disabled={!product.detailedDescription}
+                >
                   Saber Mais
                   <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
                 </Button>
@@ -119,6 +152,23 @@ const Products = () => {
           </a>
         </div>
       </div>
+
+      {/* Product Detail Dialog */}
+      <Dialog open={!!selectedProduct} onOpenChange={() => setSelectedProduct(null)}>
+        <DialogContent className="max-w-lg">
+          <DialogHeader>
+            <DialogTitle className="font-display text-2xl text-foreground">
+              {selectedProduct?.name}
+            </DialogTitle>
+            <DialogDescription className="text-primary uppercase tracking-wider text-sm">
+              {selectedProduct?.subtitle}
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-4 text-muted-foreground whitespace-pre-line">
+            {selectedProduct?.detailedDescription}
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
