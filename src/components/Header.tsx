@@ -22,7 +22,7 @@ const Header = () => {
           <a href="#inicio" className="flex items-center gap-2 group">
             <img 
               src={logoTarzo} 
-              alt="Tarzo - Comércio e Distribuição" 
+              alt="Tarzo - Comércio e distribuição de carvão vegetal, batatas e cebolas" 
               className="h-14 w-auto transition-transform group-hover:scale-105"
             />
           </a>
