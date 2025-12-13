@@ -21,22 +21,19 @@ const products = [
     image: productPremium,
     features: ["Alta densidade", "Baixa produção de fumo", "3+ horas de combustão"],
     popular: true,
-    detailedDescription: `Principais vantagens:
+    detailedDescription: `**Principais vantagens:**
 O carvão de marabú (feito a partir da planta marabú, muito comum em Cuba) é bastante valorizado no uso profissional e doméstico. Os principais benefícios são:
 
 • Alto poder calorífico – gera muito calor com menos quantidade de carvão
-
 • Queima longa e estável – ideal para grelhados prolongados
-
 • Pouca produção de fumo – melhora o sabor dos alimentos
-
 • Baixa produção de cinzas – mais limpeza e menos desperdício
-
 • Sabor neutro – não altera o gosto dos alimentos
-
 • Carvão denso e resistente – não se desfaz facilmente
+• Origem sustentável – feito a partir de uma planta invasora
 
-• Origem sustentável – feito a partir de uma planta invasora`,
+**Porquê escolher carvão de marabu?**
+Se procura um carvão de qualidade superior, com excelente rendimento e desempenho profissional, o carvão de marabu é a escolha ideal. Perfeito para churrasqueiras, restaurantes e para quem valoriza o sabor, economia e eficiência.`,
   },
   {
     id: 2,
@@ -165,7 +162,12 @@ const Products = () => {
             </DialogDescription>
           </DialogHeader>
           <div className="mt-4 text-muted-foreground whitespace-pre-line">
-            {selectedProduct?.detailedDescription}
+            {selectedProduct?.detailedDescription?.split('**').map((part, index) => {
+              if (index % 2 === 1) {
+                return <span key={index} className="block font-display text-lg text-foreground mt-4 first:mt-0 mb-2">{part}</span>;
+              }
+              return <span key={index}>{part}</span>;
+            })}
           </div>
         </DialogContent>
       </Dialog>
