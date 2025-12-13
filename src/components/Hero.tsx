@@ -44,6 +44,7 @@ const Hero = () => {
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             Carvão de qualidade superior para restaurantes exigentes. 
             Combustão uniforme, longa duração e o sabor autêntico que os seus clientes merecem.
+            Batatas e cebolas, qualidade certa para o seu negócio.
           </p>
 
           {/* CTA Buttons */}
