@@ -47,8 +47,8 @@ Se procura um carvão de qualidade superior, com excelente rendimento e desempen
   },
   {
     id: 3,
-    name: "Carvão Industrial",
-    subtitle: "Grande Volume",
+    name: "Carvão Nacional de Sobro",
+    subtitle: "",
     description: "Solução económica para grandes volumes. Perfeito para churrasqueiras industriais e eventos de grande escala.",
     image: productBulk,
     features: ["Preço competitivo", "Entrega paletizada", "Contrato personalizado"],
