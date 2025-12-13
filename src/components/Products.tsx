@@ -120,15 +120,16 @@ const Products = () => {
                 </ul>
 
                 {/* CTA */}
-                <Button 
-                  variant="outline" 
-                  className="w-full group/btn"
-                  onClick={() => product.detailedDescription && setSelectedProduct(product)}
-                  disabled={!product.detailedDescription}
-                >
-                  Saber Mais
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
-                </Button>
+                {product.detailedDescription && (
+                  <Button 
+                    variant="outline" 
+                    className="w-full group/btn"
+                    onClick={() => setSelectedProduct(product)}
+                  >
+                    Saber Mais
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                  </Button>
+                )}
               </div>
 
               {/* Hover glow effect */}
