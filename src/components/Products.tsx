@@ -8,7 +8,7 @@ const products = [
   {
     id: 1,
     name: "Carvão Premium",
-    subtitle: "Madeira de Carvalho",
+    subtitle: "Madeira de Marabu",
     description: "Carvão de madeira de carvalho 100% natural. Combustão lenta e uniforme, ideal para grelhados de alta qualidade.",
     image: productPremium,
     features: ["Alta densidade", "Baixa produção de fumo", "8+ horas de combustão"],
