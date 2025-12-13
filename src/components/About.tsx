@@ -9,7 +9,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
           <div>
-            <span className="text-primary uppercase tracking-widest text-sm font-medium">Sobre a Tarzo</span>
+            <span className="text-primary uppercase tracking-widest text-sm font-medium">Sobre a TARZO</span>
             <h2 className="font-display text-5xl md:text-6xl text-foreground mt-4 mb-8">
               TRADIÇÃO QUE
               <span className="block text-gradient-blue">ALIMENTA O FUTURO</span>
