@@ -43,7 +43,7 @@ const Products = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-primary uppercase tracking-widest text-sm font-medium">Os Nossos Produtos</span>
+          <span className="text-primary uppercase tracking-widest text-base md:text-lg font-medium">Os Nossos Produtos</span>
           <h2 className="font-display text-5xl md:text-6xl text-foreground mt-4 mb-6">
             CARVÃO DE EXCELÊNCIA
           </h2>
