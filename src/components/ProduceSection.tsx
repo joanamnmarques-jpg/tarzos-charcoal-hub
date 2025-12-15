@@ -5,7 +5,7 @@ import productOnions from "@/assets/product-onions.jpg";
 const products = [
   {
     id: 1,
-    name: "Batatas",
+    name: "Batatas Agria",
     subtitle: "Frescas e Selecionadas",
     description: "Batatas de qualidade superior, ideais para todo o tipo de confeção. Fornecimento regular com garantia de frescura.",
     image: productPotatoes,
