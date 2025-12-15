@@ -52,7 +52,7 @@ const Benefits = () => {
             A DIFERENÇA ESTÁ NOS DETALHES
           </h2>
           <p className="text-muted-foreground text-lg">
-            Mais de 15 anos dedicados a fornecer o melhor carvão para os melhores restaurantes.
+            Preço justo, qualidade garantida e serviço com distribuição eficiente de carvão, batatas e cebolas.
           </p>
         </div>
 
