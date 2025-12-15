@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import productPotatoes from "@/assets/product-potatoes.jpg";
 import productOnions from "@/assets/product-onions.jpg";
 
@@ -81,6 +82,16 @@ const ProduceSection = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="text-center mt-16">
+          <p className="text-muted-foreground mb-4">Interessado nos nossos produtos frescos?</p>
+          <a href="#contacto">
+            <Button variant="glow" size="lg">
+              Fale Connosco
+            </Button>
+          </a>
         </div>
       </div>
     </section>
