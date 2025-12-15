@@ -9,7 +9,7 @@ const benefits = [
   {
     icon: Timer,
     title: "Longa Duração",
-    description: "Mais de 8 horas de combustão contínua, reduzindo a necessidade de reabastecimento.",
+    description: "Mais de 3+ horas de combustão contínua, reduzindo a necessidade de reabastecimento.",
   },
   {
     icon: Leaf,
