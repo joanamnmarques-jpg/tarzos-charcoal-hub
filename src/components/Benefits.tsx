@@ -19,7 +19,7 @@ const benefits = [
   {
     icon: Truck,
     title: "Entrega Rápida",
-    description: "Logística eficiente com entregas em 24-48h para todo o território nacional.",
+    description: "Logística eficiente com entregas em 24–48 horas, com possibilidade de entrega em todo o território nacional.",
   },
   {
     icon: Shield,
