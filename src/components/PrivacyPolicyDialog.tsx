@@ -36,9 +36,10 @@ const PrivacyPolicyDialog = ({ children }: PrivacyPolicyDialogProps) => {
               <p className="mb-2">Os dados que podem ser recolhidos incluem:</p>
               <ul className="list-disc pl-6 space-y-1">
                 <li>Nome</li>
+                <li>Empresa</li>
+                <li>Número de identificação fiscal</li>
                 <li>Número de telefone</li>
                 <li>Endereço de e-mail</li>
-                <li>Morada (quando necessária para entrega)</li>
                 <li>Conteúdo da mensagem enviada pelo cliente</li>
               </ul>
             </section>
