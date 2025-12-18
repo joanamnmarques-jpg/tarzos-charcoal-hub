@@ -23,8 +23,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "tarzogeral@gmail.com",
-    href: "mailto:tarzogeral@gmail.com",
+    value: "tarzogeral@hotmail.com",
+    href: "mailto:tarzogeral@hotmail.com",
   },
   {
     icon: Clock,
