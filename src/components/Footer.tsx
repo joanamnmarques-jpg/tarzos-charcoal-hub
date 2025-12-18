@@ -18,7 +18,11 @@ const Footer = () => {
               />
             </a>
             <p className="text-muted-foreground max-w-md mb-6">
-              Qualidade, consistência e compromisso com a excelência.
+              Preço justo, qualidade garantida e serviço com distribuição eficiente de carvão, batatas e cebolas.
+            </p>
+            <p className="text-muted-foreground max-w-md mb-2 font-semibold">Alta Temperatura</p>
+            <p className="text-muted-foreground max-w-md mb-6">
+              Combustão que atinge e mantém temperaturas ideais para grelhados perfeitos.
             </p>
             <div className="flex gap-4">
               <a
