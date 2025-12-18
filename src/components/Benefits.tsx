@@ -35,7 +35,7 @@ const benefits = [
 
 const Benefits = () => {
   return (
-    <section id="beneficios" className="py-24 bg-secondary/30 relative overflow-hidden">
+    <section id="beneficios" className="py-16 bg-secondary/30 relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

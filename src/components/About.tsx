@@ -1,7 +1,7 @@
 
 const About = () => {
   return (
-    <section id="sobre" className="py-24 bg-background relative overflow-hidden">
+    <section id="sobre" className="py-16 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[200px]" />
 
