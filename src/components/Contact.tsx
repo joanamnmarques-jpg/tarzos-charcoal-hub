@@ -5,13 +5,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-const googleMapsUrl = "https://www.google.com/maps/dir/?api=1&destination=Rua+dos+Emigrantes+7+2530-329+Cabeça+Gorda+Lourinhã+Portugal";
+const googleMapsUrl = "https://www.google.com/maps/dir/?api=1&destination=Cabeça+Gorda+Lourinhã+Portugal";
 
 const contactInfo = [
   {
     icon: MapPin,
     label: "Morada",
-    value: "Rua dos Emigrantes, nº 7\n2530-329 Cabeça Gorda, Lourinhã, Portugal",
+    value: "Cabeça Gorda, Lourinhã, Portugal",
     href: googleMapsUrl,
   },
   {
