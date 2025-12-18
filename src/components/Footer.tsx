@@ -18,7 +18,6 @@ const Footer = () => {
               />
             </a>
             <p className="text-muted-foreground max-w-md mb-6">
-              Fornecedor premium de carvão para restaurantes desde 2009. 
               Qualidade, consistência e compromisso com a excelência.
             </p>
             <div className="flex gap-4">
