@@ -76,7 +76,8 @@ const Footer = () => {
                 { label: "Carvão Premium", href: "#produtos" },
                 { label: "Carvão Restaurante", href: "#produtos" },
                 { label: "Carvão Nacional de Sobro", href: "#produtos" },
-                { label: "Encomendas Especiais", href: "#contacto" },
+                { label: "Batatas Agria", href: "#frescos" },
+                { label: "Cebolas", href: "#frescos" },
               ].map((product) => (
                 <li key={product.label}>
                   <a
