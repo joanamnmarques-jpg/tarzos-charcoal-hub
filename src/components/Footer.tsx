@@ -72,13 +72,18 @@ const Footer = () => {
           <div>
             <h4 className="font-display text-xl text-foreground mb-6">Produtos</h4>
             <ul className="space-y-3">
-              {["Carvão Premium", "Carvão Restaurante", "Carvão Industrial", "Encomendas Especiais"].map((product) => (
-                <li key={product}>
+              {[
+                { label: "Carvão Premium", href: "#produtos" },
+                { label: "Carvão Restaurante", href: "#produtos" },
+                { label: "Carvão Industrial", href: "#produtos" },
+                { label: "Encomendas Especiais", href: "#contacto" },
+              ].map((product) => (
+                <li key={product.label}>
                   <a
-                    href="#produtos"
+                    href={product.href}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {product}
+                    {product.label}
                   </a>
                 </li>
               ))}
