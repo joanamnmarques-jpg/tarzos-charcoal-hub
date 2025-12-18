@@ -81,7 +81,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contacto" className="py-24 bg-secondary/30 relative overflow-hidden">
+    <section id="contacto" className="py-16 bg-secondary/30 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute left-0 bottom-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[150px]" />
 

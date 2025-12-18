@@ -24,7 +24,7 @@ const products = [
 
 const ProduceSection = () => {
   return (
-    <section id="frescos" className="py-24 bg-secondary/20 relative overflow-hidden">
+    <section id="frescos" className="py-16 bg-secondary/20 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-[150px]" />
 
