@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const googleMapsUrl = "https://www.google.com/maps/dir/?api=1&destination=Cabeça+Gorda+Lourinhã+Portugal";
 
@@ -35,6 +36,7 @@ const contactInfo = [
 
 const Contact = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -44,13 +46,34 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Mensagem Enviada!",
-      description: "Entraremos em contacto consigo brevemente.",
-    });
-    setFormData({ name: "", company: "", nif: "", email: "", phone: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData,
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      toast({
+        title: "Mensagem Enviada!",
+        description: "Entraremos em contacto consigo brevemente.",
+      });
+      setFormData({ name: "", company: "", nif: "", email: "", phone: "", message: "" });
+    } catch (error: any) {
+      console.error("Error sending email:", error);
+      toast({
+        title: "Erro ao enviar",
+        description: "Ocorreu um erro ao enviar a mensagem. Tente novamente.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -203,9 +226,18 @@ const Contact = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button type="submit" variant="glow" size="lg" className="flex-1">
-                  Enviar Mensagem
-                  <Send className="w-4 h-4 ml-2" />
+                <Button type="submit" variant="glow" size="lg" className="flex-1" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                      A enviar...
+                    </>
+                  ) : (
+                    <>
+                      Enviar Mensagem
+                      <Send className="w-4 h-4 ml-2" />
+                    </>
+                  )}
                 </Button>
                 <Button asChild variant="outline" size="lg" className="flex-1">
                   <a href="tel:917197562">
