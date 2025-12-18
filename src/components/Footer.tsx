@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import logoTarzo from "@/assets/logo-tarzo.png";
+import PrivacyPolicyDialog from "./PrivacyPolicyDialog";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -98,7 +99,9 @@ const Footer = () => {
             © {currentYear} TARZO - Comércio e Distribuição. Todos os direitos reservados.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-primary transition-colors">Política de Privacidade</a>
+            <PrivacyPolicyDialog>
+              <button className="hover:text-primary transition-colors">Política de Privacidade</button>
+            </PrivacyPolicyDialog>
             <a href="#" className="hover:text-primary transition-colors">Termos e Condições</a>
           </div>
         </div>
