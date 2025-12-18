@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import logoTarzo from "@/assets/logo-tarzo.png";
 import PrivacyPolicyDialog from "./PrivacyPolicyDialog";
 
@@ -35,13 +35,6 @@ const Footer = () => {
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5 text-muted-foreground group-hover:text-primary-foreground" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary transition-colors group"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-primary-foreground" />
               </a>
             </div>
           </div>
