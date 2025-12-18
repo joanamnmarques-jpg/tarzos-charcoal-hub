@@ -1,6 +1,7 @@
 import { Facebook, Instagram } from "lucide-react";
 import logoTarzo from "@/assets/logo-tarzo.png";
 import PrivacyPolicyDialog from "./PrivacyPolicyDialog";
+import TermsConditionsDialog from "./TermsConditionsDialog";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -97,7 +98,9 @@ const Footer = () => {
             <PrivacyPolicyDialog>
               <button className="hover:text-primary transition-colors">Política de Privacidade</button>
             </PrivacyPolicyDialog>
-            <a href="#" className="hover:text-primary transition-colors">Termos e Condições</a>
+            <TermsConditionsDialog>
+              <button className="hover:text-primary transition-colors">Termos e Condições</button>
+            </TermsConditionsDialog>
           </div>
         </div>
       </div>
