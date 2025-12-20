@@ -31,7 +31,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "Tarzo Website <onboarding@resend.dev>",
-      to: ["joana_feijoa@hotmail.com"],
+      to: ["joana.mn.marques@gmail.com"],
       subject: `Novo Pedido de Orçamento - ${name}`,
       html: `
         <!DOCTYPE html>
