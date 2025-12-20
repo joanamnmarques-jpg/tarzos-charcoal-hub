@@ -30,8 +30,8 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Sending contact email with data:", { name, company, nif, email, phone });
 
     const emailResponse = await resend.emails.send({
-      from: "Tarzo Website <onboarding@resend.dev>",
-      to: ["joana.mn.marques@gmail.com"],
+      from: "Tarzo Website <noreply@tarzo-dominio.com>",
+      to: ["tarzogeral@hotmail.com"],
       subject: `Novo Pedido de Orçamento - ${name}`,
       html: `
         <!DOCTYPE html>
