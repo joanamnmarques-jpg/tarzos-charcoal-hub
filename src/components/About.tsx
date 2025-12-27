@@ -33,10 +33,10 @@ const About = () => {
           </div>
 
           {/* Right content - Video */}
-          <div className="relative">
-            <div className="bg-card border border-border rounded-2xl overflow-hidden relative">
+          <div className="relative lg:self-start">
+            <div className="bg-card border border-border rounded-2xl overflow-hidden relative lg:max-h-[400px]">
               <video 
-                className="w-full h-auto"
+                className="w-full h-full object-cover lg:max-h-[400px]"
                 controls
                 preload="metadata"
               >
