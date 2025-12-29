@@ -43,7 +43,19 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button variant="glow" size="lg" asChild>
-              <a href="#contacto">Pedir Orçamento</a>
+              <a 
+                href="#contacto"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && (window as any).gtag) {
+                    (window as any).gtag('event', 'click', {
+                      event_category: 'CTA',
+                      event_label: 'Pedir Orçamento - Header',
+                    });
+                  }
+                }}
+              >
+                Pedir Orçamento
+              </a>
             </Button>
           </div>
 
@@ -72,7 +84,20 @@ const Header = () => {
                 </a>
               ))}
               <Button variant="glow" size="lg" className="mt-4" asChild>
-                <a href="#contacto" onClick={() => setIsMenuOpen(false)}>Pedir Orçamento</a>
+                <a 
+                  href="#contacto" 
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    if (typeof window !== 'undefined' && (window as any).gtag) {
+                      (window as any).gtag('event', 'click', {
+                        event_category: 'CTA',
+                        event_label: 'Pedir Orçamento - Mobile',
+                      });
+                    }
+                  }}
+                >
+                  Pedir Orçamento
+                </a>
               </Button>
             </div>
           </nav>
