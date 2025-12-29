@@ -55,7 +55,17 @@ const Hero = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </a>
-            <a href="#contacto">
+            <a 
+              href="#contacto"
+              onClick={() => {
+                if (typeof window !== 'undefined' && (window as any).gtag) {
+                  (window as any).gtag('event', 'click', {
+                    event_category: 'CTA',
+                    event_label: 'Contactar - Hero',
+                  });
+                }
+              }}
+            >
               <Button variant="heroOutline" size="xl">
                 Contactar
               </Button>
