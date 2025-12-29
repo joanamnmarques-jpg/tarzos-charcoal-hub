@@ -50,6 +50,14 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    // Track button click in Google Analytics
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'click', {
+        event_category: 'Contact Form',
+        event_label: 'Enviar Mensagem',
+      });
+    }
+
     try {
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
         body: formData,
