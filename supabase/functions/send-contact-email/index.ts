@@ -32,7 +32,26 @@ const handler = async (req: Request): Promise<Response> => {
     const emailResponse = await resend.emails.send({
       from: "Tarzo <contacto@tarzo.pt>",
       to: ["tarzogeral@hotmail.com", "joana_feijoa@hotmail.com"],
+      reply_to: "contacto@tarzo.pt",
       subject: `Novo Pedido de Orçamento - ${name}`,
+      text: `
+Novo Pedido de Orçamento - TARZO
+
+Recebeu um novo pedido de orçamento através do website:
+
+Nome: ${name}
+Empresa: ${company || "Não especificada"}
+NIF: ${nif}
+Email: ${email}
+Telefone: ${phone || "Não especificado"}
+
+Mensagem:
+${message}
+
+---
+Este email foi enviado automaticamente através do formulário de contacto do website TARZO.
+© ${new Date().getFullYear()} TARZO - Comércio e Distribuição
+      `,
       html: `
         <!DOCTYPE html>
         <html>
@@ -43,7 +62,7 @@ const handler = async (req: Request): Promise<Response> => {
         <body style="margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; background-color: #1a1a1a;">
           <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
             <!-- Header -->
-            <div style="background: linear-gradient(135deg, #f97316, #ea580c); padding: 30px; border-radius: 12px 12px 0 0; text-align: center;">
+            <div style="background: linear-gradient(135deg, #1e3a5f, #2563eb); padding: 30px; border-radius: 12px 12px 0 0; text-align: center;">
               <h1 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: bold;">TARZO</h1>
               <p style="color: rgba(255,255,255,0.9); margin: 10px 0 0 0; font-size: 14px;">Novo Pedido de Orçamento</p>
             </div>
@@ -55,31 +74,31 @@ const handler = async (req: Request): Promise<Response> => {
               <!-- Contact Details Table -->
               <table style="width: 100%; border-collapse: collapse; margin-bottom: 25px;">
                 <tr>
-                  <td style="padding: 12px 15px; background-color: #333333; border-bottom: 1px solid #404040; color: #f97316; font-weight: bold; width: 120px; font-size: 14px;">Nome</td>
+                  <td style="padding: 12px 15px; background-color: #333333; border-bottom: 1px solid #404040; color: #3b82f6; font-weight: bold; width: 120px; font-size: 14px;">Nome</td>
                   <td style="padding: 12px 15px; background-color: #333333; border-bottom: 1px solid #404040; color: #ffffff; font-size: 14px;">${name}</td>
                 </tr>
                 <tr>
-                  <td style="padding: 12px 15px; background-color: #2d2d2d; border-bottom: 1px solid #404040; color: #f97316; font-weight: bold; font-size: 14px;">Empresa</td>
+                  <td style="padding: 12px 15px; background-color: #2d2d2d; border-bottom: 1px solid #404040; color: #3b82f6; font-weight: bold; font-size: 14px;">Empresa</td>
                   <td style="padding: 12px 15px; background-color: #2d2d2d; border-bottom: 1px solid #404040; color: #ffffff; font-size: 14px;">${company || "Não especificada"}</td>
                 </tr>
                 <tr>
-                  <td style="padding: 12px 15px; background-color: #333333; border-bottom: 1px solid #404040; color: #f97316; font-weight: bold; font-size: 14px;">NIF</td>
+                  <td style="padding: 12px 15px; background-color: #333333; border-bottom: 1px solid #404040; color: #3b82f6; font-weight: bold; font-size: 14px;">NIF</td>
                   <td style="padding: 12px 15px; background-color: #333333; border-bottom: 1px solid #404040; color: #ffffff; font-size: 14px;">${nif}</td>
                 </tr>
                 <tr>
-                  <td style="padding: 12px 15px; background-color: #2d2d2d; border-bottom: 1px solid #404040; color: #f97316; font-weight: bold; font-size: 14px;">Email</td>
+                  <td style="padding: 12px 15px; background-color: #2d2d2d; border-bottom: 1px solid #404040; color: #3b82f6; font-weight: bold; font-size: 14px;">Email</td>
                   <td style="padding: 12px 15px; background-color: #2d2d2d; border-bottom: 1px solid #404040; color: #ffffff; font-size: 14px;"><a href="mailto:${email}" style="color: #60a5fa; text-decoration: none;">${email}</a></td>
                 </tr>
                 <tr>
-                  <td style="padding: 12px 15px; background-color: #333333; color: #f97316; font-weight: bold; font-size: 14px;">Telefone</td>
+                  <td style="padding: 12px 15px; background-color: #333333; color: #3b82f6; font-weight: bold; font-size: 14px;">Telefone</td>
                   <td style="padding: 12px 15px; background-color: #333333; color: #ffffff; font-size: 14px;">${phone ? `<a href="tel:${phone}" style="color: #60a5fa; text-decoration: none;">${phone}</a>` : "Não especificado"}</td>
                 </tr>
               </table>
               
               <!-- Message Section -->
               <div style="margin-top: 20px;">
-                <h2 style="color: #f97316; font-size: 16px; margin: 0 0 12px 0; font-weight: bold;">Mensagem:</h2>
-                <div style="background-color: #333333; padding: 20px; border-radius: 8px; border-left: 4px solid #f97316;">
+                <h2 style="color: #3b82f6; font-size: 16px; margin: 0 0 12px 0; font-weight: bold;">Mensagem:</h2>
+                <div style="background-color: #333333; padding: 20px; border-radius: 8px; border-left: 4px solid #2563eb;">
                   <p style="color: #e5e5e5; margin: 0; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">${message}</p>
                 </div>
               </div>
