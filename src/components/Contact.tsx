@@ -248,7 +248,17 @@ const Contact = () => {
                   )}
                 </Button>
                 <Button asChild variant="outline" size="lg" className="flex-1">
-                  <a href="tel:917197562">
+                  <a 
+                    href="tel:917197562"
+                    onClick={() => {
+                      if (typeof window !== 'undefined' && (window as any).gtag) {
+                        (window as any).gtag('event', 'click', {
+                          event_category: 'Contact Form',
+                          event_label: 'Ligar',
+                        });
+                      }
+                    }}
+                  >
                     <Phone className="w-4 h-4 mr-2 text-green-500" />
                     Ligar
                   </a>
