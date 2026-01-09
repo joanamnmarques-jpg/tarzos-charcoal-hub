@@ -36,6 +36,56 @@
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://tarzo.pt/" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Tarzo",
+      "description": "Fornecedor de carvão de qualidade superior para restaurantes. O fogo que eleva o sabor.",
+      "url": "https://tarzo.pt",
+      "logo": "https://tarzo.pt/favicon.png",
+      "image": "https://tarzo.pt/og-image.jpg",
+      "telephone": "+351967165406",
+      "email": "geral@tarzo.pt",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Portugal",
+        "addressCountry": "PT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "addressCountry": "PT"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "priceRange": "$$",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Portugal"
+      },
+      "sameAs": [],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Produtos de Carvão",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Carvão Premium para Restaurantes",
+              "description": "Carvão de qualidade superior com combustão uniforme e longa duração"
+            }
+          }
+        ]
+      }
+    }
+    </script>
   </head>
 
   <body>
