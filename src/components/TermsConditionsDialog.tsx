@@ -22,14 +22,14 @@ const TermsConditionsDialog = ({ children }: TermsConditionsDialogProps) => {
         <ScrollArea className="h-[70vh] pr-4">
           <div className="space-y-6 text-muted-foreground">
             <section>
-              <h3 className="text-foreground font-semibold mb-2">1. Identificação</h3>
+              <h3 className="text-foreground font-bold text-base mb-2">1. Identificação</h3>
               <p>
                 Os presentes Termos e Condições regulam a utilização deste site, destinado à venda de carvão. Ao contactar-nos através do site ou por mensagem, o utilizador concorda com os termos aqui descritos.
               </p>
             </section>
 
             <section>
-              <h3 className="text-foreground font-semibold mb-2">2. Objeto do Site</h3>
+              <h3 className="text-foreground font-bold text-base mb-2">2. Objeto do Site</h3>
               <p className="mb-2">
                 Este site tem como finalidade exclusivamente informativa, destinando-se a apresentar os produtos disponíveis (carvão) e os meios de contacto do vendedor.
               </p>
@@ -48,7 +48,7 @@ const TermsConditionsDialog = ({ children }: TermsConditionsDialogProps) => {
             </section>
 
             <section>
-              <h3 className="text-foreground font-semibold mb-2">3. Processo de Encomenda</h3>
+              <h3 className="text-foreground font-bold text-base mb-2">3. Processo de Encomenda</h3>
               <ul className="list-disc pl-6 space-y-1">
                 <li>O cliente entra em contacto através dos meios disponibilizados no site (ex.: WhatsApp, telefone, e-mail ou redes sociais).</li>
                 <li>São prestadas informações sobre preço, quantidade, disponibilidade e entrega.</li>
@@ -58,7 +58,7 @@ const TermsConditionsDialog = ({ children }: TermsConditionsDialogProps) => {
             </section>
 
             <section>
-              <h3 className="text-foreground font-semibold mb-2">4. Preços e Pagamentos</h3>
+              <h3 className="text-foreground font-bold text-base mb-2">4. Preços e Pagamentos</h3>
               <ul className="list-disc pl-6 space-y-1">
                 <li>Os preços indicados são informados por mensagem e podem estar sujeitos a alteração sem aviso prévio.</li>
                 <li>O método de pagamento será acordado diretamente com o cliente (ex.: dinheiro, transferência bancária ou outro meio disponível).</li>
@@ -67,7 +67,7 @@ const TermsConditionsDialog = ({ children }: TermsConditionsDialogProps) => {
             </section>
 
             <section>
-              <h3 className="text-foreground font-semibold mb-2">5. Entregas</h3>
+              <h3 className="text-foreground font-bold text-base mb-2">5. Entregas</h3>
               <ul className="list-disc pl-6 space-y-1">
                 <li>As entregas são efetuadas no local e data acordados com o cliente.</li>
                 <li>O cliente deve garantir que alguém esteja disponível para receber a encomenda.</li>
@@ -76,7 +76,7 @@ const TermsConditionsDialog = ({ children }: TermsConditionsDialogProps) => {
             </section>
 
             <section>
-              <h3 className="text-foreground font-semibold mb-2">6. Qualidade do Produto</h3>
+              <h3 className="text-foreground font-bold text-base mb-2">6. Qualidade do Produto</h3>
               <ul className="list-disc pl-6 space-y-1">
                 <li>O carvão vendido cumpre os padrões normais de qualidade para o seu fim.</li>
                 <li>Pequenas variações de tamanho, peso ou aparência são consideradas normais e não constituem defeito.</li>
@@ -85,7 +85,7 @@ const TermsConditionsDialog = ({ children }: TermsConditionsDialogProps) => {
             </section>
 
             <section>
-              <h3 className="text-foreground font-semibold mb-2">7. Cancelamentos e Devoluções</h3>
+              <h3 className="text-foreground font-bold text-base mb-2">7. Cancelamentos e Devoluções</h3>
               <ul className="list-disc pl-6 space-y-1">
                 <li>Qualquer pedido de cancelamento deverá ser comunicado com a maior antecedência possível.</li>
                 <li>As situações de cancelamento, alteração ou eventual devolução serão analisadas caso a caso, conjuntamente com o cliente, tendo em conta o estado da encomenda, logística e demais circunstâncias.</li>
@@ -93,7 +93,7 @@ const TermsConditionsDialog = ({ children }: TermsConditionsDialogProps) => {
             </section>
 
             <section>
-              <h3 className="text-foreground font-semibold mb-2">8. Responsabilidade</h3>
+              <h3 className="text-foreground font-bold text-base mb-2">8. Responsabilidade</h3>
               <ul className="list-disc pl-6 space-y-1">
                 <li>O vendedor não se responsabiliza por uso indevido do produto após a entrega.</li>
                 <li>A responsabilidade do vendedor limita-se ao valor pago pelo produto adquirido.</li>
@@ -101,28 +101,28 @@ const TermsConditionsDialog = ({ children }: TermsConditionsDialogProps) => {
             </section>
 
             <section>
-              <h3 className="text-foreground font-semibold mb-2">9. Proteção de Dados</h3>
+              <h3 className="text-foreground font-bold text-base mb-2">9. Proteção de Dados</h3>
               <p>
                 Os dados pessoais fornecidos pelos clientes são tratados de acordo com a nossa Política de Privacidade, disponível neste site.
               </p>
             </section>
 
             <section>
-              <h3 className="text-foreground font-semibold mb-2">10. Alterações aos Termos e Condições</h3>
+              <h3 className="text-foreground font-bold text-base mb-2">10. Alterações aos Termos e Condições</h3>
               <p>
                 Reservamo-nos o direito de alterar os presentes Termos e Condições a qualquer momento. As alterações entram em vigor após a sua publicação no site.
               </p>
             </section>
 
             <section>
-              <h3 className="text-foreground font-semibold mb-2">11. Lei Aplicável</h3>
+              <h3 className="text-foreground font-bold text-base mb-2">11. Lei Aplicável</h3>
               <p>
                 Os presentes Termos e Condições são regidos pela legislação aplicável no país onde a atividade é exercida.
               </p>
             </section>
 
             <section>
-              <h3 className="text-foreground font-semibold mb-2">12. Contactos</h3>
+              <h3 className="text-foreground font-bold text-base mb-2">12. Contactos</h3>
               <p>
                 Para qualquer questão relacionada com estes Termos e Condições, o cliente poderá contactar-nos através dos meios indicados no site.
               </p>
