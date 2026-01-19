@@ -38,49 +38,116 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://tarzo.pt/" />
 
-    <!-- JSON-LD Structured Data -->
+    <!-- JSON-LD Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TARZO",
+      "url": "https://tarzo.pt",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tarzo.pt/favicon.png",
+        "width": 512,
+        "height": 512
+      },
+      "sameAs": [
+        "https://www.facebook.com/geraltaro"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+351917197562",
+        "contactType": "customer service",
+        "email": "tarzogeral@hotmail.com",
+        "availableLanguage": "Portuguese"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data - LocalBusiness -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Tarzo",
-      "description": "Fornecedor de carvão de qualidade superior para restaurantes. O fogo que eleva o sabor.",
+      "name": "TARZO",
+      "description": "Distribuidor de carvão premium, batatas e cebolas para restaurantes, supermercados e retalho em Portugal.",
       "url": "https://tarzo.pt",
       "logo": "https://tarzo.pt/favicon.png",
       "image": "https://tarzo.pt/og-image.jpg",
-      "telephone": "+351967165406",
-      "email": "geral@tarzo.pt",
+      "telephone": "+351917197562",
+      "email": "tarzogeral@hotmail.com",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Portugal",
+        "streetAddress": "Cabeça Gorda",
+        "addressLocality": "Lourinhã",
         "addressCountry": "PT"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "addressCountry": "PT"
+        "latitude": 39.2414,
+        "longitude": -9.3133
       },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "18:00"
-      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      ],
       "priceRange": "$$",
       "areaServed": {
         "@type": "Country",
         "name": "Portugal"
       },
-      "sameAs": [],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Produtos de Carvão",
+        "name": "Produtos TARZO",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Product",
-              "name": "Carvão Premium para Restaurantes",
-              "description": "Carvão de qualidade superior com combustão uniforme e longa duração"
+              "name": "Carvão Premium Marabú Cubano",
+              "description": "Carvão 100% natural de madeira marabú com mais de 3 horas de combustão"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Carvão Restaurante",
+              "description": "Carvão profissional com ignição rápida em 15 minutos"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Carvão Nacional de Sobro",
+              "description": "Carvão de origem portuguesa com ignição rápida"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Batatas Agria",
+              "description": "Batatas de qualidade para uso comercial"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Cebolas",
+              "description": "Cebolas frescas para restaurantes e retalho"
             }
           }
         ]
